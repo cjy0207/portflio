@@ -27,39 +27,51 @@
 
     <script defer src="js/main.js"></script>
   </head>
+
   <body>
-    <section class="layout">
-      <!--사이드 바-->
-      <aside class="aside">
-        <div class="inner">
-          <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="로고" />
-          </a>
-          <nav>
+    <div class="wrap">
+      <section class="side-wrap section">
+        <aside class="aside">
+          <div class="inner">
+            <a href="index.html" class="logo">
+              <img src="images/logo.png" alt="" />
+            </a>
+
             <ul>
               <li><a href="#about">ABOUT</a></li>
               <li><a href="#skill">SKILL</a></li>
               <li><a href="#project">PROJECT</a></li>
               <li><a href="#contact">CONTACT</a></li>
             </ul>
-          </nav>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section">
+        <!--컨텐츠-->
+        <div class="content">
+          <div class="inner">
+            <section>
+              <header class="header section">
+                <h3>Choi Ji Yun | Full Stack Developer</h3>
+              </header>
+            </section>
+
+            <section id="about" class="content-menu">
+              <h2 class="title">ABOUT</h2>
+            </section>
+            <section id="skill" class="content-menu">
+              <h2 class="title">SKILL</h2>
+            </section>
+            <section id="project" class="content-menu">
+              <h2 class="title">PROJECT</h2>
+            </section>
+            <section id="contact" class="content-menu">
+              <h2 class="title">CONTACT</h2>
+            </section>
+          </div>
         </div>
-      </aside>
-
-      <!--컨텐츠-->
-      <div class="content">
-      <header class="header">
-        <div class="inner">dd</div>
-      </header>
-
-      <main class="main">
-        <section id="about" class="section">About 섹션</section>
-        <section id="skill" class="section">Skill 섹션</section>
-        <section id="project" class="section">Project 섹션</section>
-        <section id="contact" class="section">Contact 섹션</section>
-      </main>
+      </section>
     </div>
-
-    </section>
   </body>
 </html>
