@@ -3,32 +3,33 @@
 }
 
 body {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+  font-family: "Open Sans", "Noto Sans KR", sans-serif;
   line-height: 1.6;
   color: white;
+  background-color: #333;
 }
+
 a{
   text-decoration: none;
 }
 
 .inner {
-  border: 1px solid red;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.section{
-  border: 1px solid greenyellow;
+.main{
   width: 100%;
+  margin: 0 auto;
 }
 
 .title {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 800;
-  text-align: left;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: pink;
 }
-
 
 .wrap{
   display: flex;
@@ -36,45 +37,134 @@ a{
   min-height: 100vh;
 }
 
+
+/*ASIDE*/
+/*-------------------------------------------*/
 .side-wrap {
-  width: 260px;
-  background: #222;
+  top: 0;
+  right: 0;
+  position: fixed;
+  width: 200px;
+  height: 100vh;
+  z-index: 1000;
 }
 
 .aside {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 100px;
 }
 
 .aside ul li{
+  text-align: center;
   margin-bottom: 20px;
+  background-color: #333;
+  border: 1px solid #555;
+  height: 50px;
+  border-radius:50px 0 0 50px;
 }
 
 .aside ul li a{
+  line-height: 50px;
   color: white;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.wrap > section:nth-child(2) {
-  flex: 1;
-  background: #333;
+.aside ul li:hover{
+  border: 1px solid pink;
+}
+
+/*스크롤 매직으로 li백그라운드 컬러 변경하기*/
+
+
+/*-------------------------------------------*/
+.main{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 85%;
+  padding: 20px;
 }
 
 .content {
-  border: 1px solid greenyellow; 
-  padding: 20px;
+  padding-left: 30px;
+}
+
+.header{
+  background-repeat: none;
+  background-size: cover;
   width: 100%;
 }
 
-.content-menu > h2{
-  border-bottom: 1px solid #444;
+.header > h1{
+  color: white;
 }
 
-.content > .inner{
+.header > div{
+  font-size: 30px;
+  font-weight: 800;
+}
+.header > h4{
+  margin-top: 20px;
+}
+
+/*ABOUT*/
+/*-------------------------------------------*/
+.about {
+  padding: 150px 0;
+}
+.about > .inner {
+  position: relative;
+}
+.about .about__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.about .about__wrapper .about__img {
+  width: 40%;
+}
+.about .about__wrapper .about__img img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.1);
+}
+.about .about__wrapper .about__text {
+  width: 40%;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
+.about .about__wrapper .about__text .slogan {
+  font-size: 35px;
+  font-weight: bold;
+}
+.about .about__wrapper .about__text h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.about .about__wrapper .about__text h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.about .about__wrapper .about__text li {
+  line-height: 1.8;
+}
+.about .about__btn {
+  position: absolute;
+  bottom: -30px;
+  right: 30px;
+}
 
+/* .about .about__btn a{
+  display: flex;
+  align-items: center;
+} */
+
+.about .about__btn img {
+  display: inline;
+  vertical-align: middle; /*인라인 요소글끼리 가운데로 */
+  width: 28px;
+  margin-right: 10px;
+}
 
