@@ -1,16 +1,23 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   font-family: "Open Sans", "Noto Sans KR", sans-serif;
   line-height: 1.6;
   color: white;
-  background-color: #333;
+  background: #333;
 }
 
-a{
+a {
   text-decoration: none;
+}
+
+.section{
+  border: 1px solid red;
+  min-height: 90vh;
+  margin: 20px 0;
+  padding: 30px 10px;
+
 }
 
 .inner {
@@ -18,25 +25,33 @@ a{
   margin: 0 auto;
 }
 
-.main{
+.main {
   width: 100%;
   margin: 0 auto;
 }
 
 .title {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 800;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  text-align: center;
   color: pink;
 }
 
-.wrap{
+.title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background-color: pink;
+  margin: 10px auto 0;
+}
+
+.wrap {
   display: flex;
   width: 100%;
   min-height: 100vh;
 }
-
 
 /*ASIDE*/
 /*-------------------------------------------*/
@@ -44,7 +59,7 @@ a{
   top: 0;
   right: 0;
   position: fixed;
-  width: 200px;
+  width: 15%;
   height: 100vh;
   z-index: 1000;
 }
@@ -53,80 +68,116 @@ a{
   margin-top: 100px;
 }
 
-.aside ul li{
+.aside ul li {
   text-align: center;
   margin-bottom: 20px;
   background-color: #333;
-  border: 1px solid #555;
+  border: 1px solid #444;
   height: 50px;
-  border-radius:50px 0 0 50px;
+  border-radius: 50px 0 0 50px;
 }
 
-.aside ul li a{
+.aside ul li a {
   line-height: 50px;
   color: white;
   font-weight: bold;
   font-size: 20px;
 }
 
-.aside ul li:hover{
+.aside ul li:hover {
   border: 1px solid pink;
 }
 
 /*스크롤 매직으로 li백그라운드 컬러 변경하기*/
 
-
 /*-------------------------------------------*/
-.main{
-  top: 0;
-  left: 0;
-  position: absolute;
+.main {
+  margin-left: 0;
   width: 85%;
   padding: 20px;
 }
 
 .content {
-  padding-left: 30px;
+  padding-left: 40px;
 }
 
-.header{
-  background-repeat: none;
-  background-size: cover;
-  width: 100%;
+.header {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.header > h1{
-  color: white;
+.header > h1 {
+  font-size: 50px;
+  font-weight: 800;
 }
 
-.header > div{
+.header > h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: pink;
+  margin: 40px 0;
+}
+
+.header > div {
   font-size: 30px;
   font-weight: 800;
 }
-.header > h4{
-  margin-top: 20px;
+.header > h3 {
+  margin-top: 30px;
 }
 
 /*ABOUT*/
 /*-------------------------------------------*/
 .about {
-  padding: 150px 0;
+ 
 }
+
 .about > .inner {
   position: relative;
 }
-.about .about__wrapper {
+
+.about .about__wrapper{
   display: flex;
   justify-content: space-between;
+
+  opacity: 0;
+  transform: translateX(-150px);
+  transition: 2s;
 }
-.about .about__wrapper .about__img {
-  width: 40%;
+
+.about.show .about__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  opacity: 1;
+  transform: translateX(0);
 }
-.about .about__wrapper .about__img img {
-  width: 100%;
+
+.about .about__wrapper .about__profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  row-gap: 40px;
+}
+
+.about .about__wrapper .about__profile li {
+  margin: 15px;
+  font-size: 20px;
+}
+
+.about .about__wrapper .about__profile img {
+  width: 50%;
   border-radius: 50%;
   box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.1);
 }
+
+.about .about__wrapper .about__profile .profile {
+  text-align: center;
+}
+
 .about .about__wrapper .about__text {
   width: 40%;
   padding: 30px;
@@ -134,7 +185,7 @@ a{
   flex-direction: column;
   justify-content: space-evenly;
 }
-.about .about__wrapper .about__text .slogan {
+.about .about__wrapper .about__profile .slogan {
   font-size: 35px;
   font-weight: bold;
 }
@@ -168,3 +219,34 @@ a{
   margin-right: 10px;
 }
 
+/*SKILL*/
+/*----------------------------------------------*/
+.skill{
+  border: 1px solid red;
+}
+
+.skill .inner{
+  display: flex;
+  justify-content: center;
+}
+
+.skill-table{
+  width: 70%;
+  padding: 40px;
+  background-color: #222;
+  border-radius: 10px;
+  
+}
+
+/*FOOTER*/
+/*----------------------------------------------*/
+footer {
+  background: linear-gradient(180deg, #333, #4e3b3e, #76595e);
+  color: white;
+}
+
+footer .copyright {
+  text-align: center;
+  font-weight: 600;
+  line-height: 200px; /*수직 정렬*/
+}
