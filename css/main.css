@@ -1,6 +1,12 @@
 * {
   box-sizing: border-box;
 }
+
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Open Sans", "Noto Sans KR", sans-serif;
   line-height: 1.6;
@@ -51,6 +57,17 @@ a {
   width: 100%;
   min-height: 100vh;
 }
+
+.animate-flash {
+  animation-name: flash;
+  animation-duration: 0.5s;
+  /* animation-timing-function: cubic-bezier(.43,.19,.02,1); */
+  animation-iteration-count: 2;
+}
+
+/* VISUAL */
+/*-------------------------------------------*/
+
 
 /*ASIDE*/
 /*-------------------------------------------*/
@@ -349,4 +366,21 @@ footer .copyright {
   text-align: center;
   font-weight: 600;
   line-height: 200px; /*수직 정렬*/
+}
+
+
+
+/*ANIMATION*/
+/*----------------------------------------------*/
+@keyframes flash {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
 }
