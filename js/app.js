@@ -162,5 +162,29 @@ stage.addEventListener("touchend", (e) => {
   startX = null;
 });
 
+//scroll to top
+const toTopEl = document.querySelector('.toTop')
+const MenuEl = document.querySelector('.menu')
 
+window.addEventListener('scroll', function(){
+  if(this.window.scrollY < 300) {
+    toTopEl.style.transform = 'translateX(100px)'
+    toTopEl.style.opacity = '0'
+    MenuEl.style.transform = 'translateY(0)'
+  }else if(this.window.scrollY >= 300){
+    toTopEl.style.transform = 'translateX(0)'
+    toTopEl.style.opacity = '1'
+    MenuEl.style.transform = 'translateY(-70px)'
+  }
+})
 
+const sideMenu = document.querySelector('.aside')
+
+MenuEl.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (sideMenu.style.display === "none" || sideMenu.style.display === "") {
+    sideMenu.style.display = "block";
+  } else {
+    sideMenu.style.display = "none";
+  }
+});
