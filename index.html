@@ -23,10 +23,17 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="css/main.css" />
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    
+
     <script defer src="./js/app.js"></script>
   </head>
 
@@ -73,11 +80,7 @@
                       <li>email : -@gmail.com</li>
                       <li>
                         <a href="https://github.com/">
-                          <img
-                            src="https://cdn-icons-png.flaticon.com/256/25/25231.png"
-                            style="width: 50px"
-                            alt="깃로고"
-                          />
+                          GitHub
                         </a>
                       </li>
                     </ul>
@@ -189,6 +192,38 @@
 
           <section id="project" class="project section">
             <h2 class="title">PROJECT</h2>
+            <div class="inner">
+              <div class="project__card">
+                <div class="card prev"></div>
+                <div class="card center"></div>
+                <div class="card next"></div>
+              </div>
+
+              <div class="project-btn">
+                <div class="button-prev">
+                  <span class="material-symbols-outlined">
+                    arrow_back_ios
+                  </span>
+                </div>
+                <div class="button-next">
+                  <span class="material-symbols-outlined">
+                    arrow_forward_ios
+                  </span>
+                </div>
+              </div>
+
+              <div class="project-text">
+                <ul>
+                  <li><span id="p-name">-</span></li>
+                  <li><span id="p-date">-</span></li>
+                  <li><span id="p-desc">-</span></li>
+                  <li>
+                    <strong>배포</strong>
+                    <a id="p-site" href="#" target="_blank" rel="noopener">-</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </section>
         </div>
       </section>
@@ -217,5 +252,7 @@
         </p>
       </div>
     </footer>
+
+    <!--MODAL-->
   </body>
 </html>
