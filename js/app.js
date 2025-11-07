@@ -161,3 +161,6 @@ stage.addEventListener("touchend", (e) => {
   }
   startX = null;
 });
+
+
+

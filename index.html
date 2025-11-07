@@ -1,235 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Choi Ji Yun | Full Stack Developer</title>
 
-    <link rel="icon" href="favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
-    />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Reset -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-    />
-
+    <!-- Swiper (필요하면 유지) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
-    <link rel="stylesheet" href="css/main.css" />
-
+    <!-- ScrollMagic -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 
+    <!-- App CSS / JS -->
+    <link rel="stylesheet" href="css/main.css" />
     <script defer src="./js/app.js"></script>
   </head>
 
   <body>
     <div class="wrap">
-      <section class="main">
-        <!--컨텐츠-->
-        <div class="content">
-          <section id="introduction" class="introduction section">
+      <section class="main flex-grow-1">
+        <!-- INTRODUCTION -->
+        <section id="introduction" class="introduction section">
+          <div class="container">
             <header id="header" class="header">
-              <h1>|Choi Ji Yun <br />|Full Stack Developer</h1>
-              <h2>Introduction</h2>
-              <div>"사람에게 닿는 기술을 만들고 싶은 개발자"</div>
-              <h3>
-                <span>안녕하세요. 백엔드 개발자를 지향하는 최지윤입니다.</span
-                ><br />
-                <span
-                  >저는 한 줄의 코드라도 누군가에게 도움이 된다면, 그 자체로
-                  의미 있는 일이라고 믿습니다.</span
-                ><br />
-                <span
-                  >기술과 사람 사이의 균형을 고민하며, 따뜻함이 느껴지는
-                  서비스를 만들고 싶습니다.</span
-                ><br />
-                <span
-                  >작은 불편을 해결하는 것에서 시작해, 누군가의 하루를 더
-                  편안하게 만드는 개발자가 되겠습니다.</span
-                >
+              <h1 class="display-5 fw-bold">
+                |Choi Ji Yun <br />|Full Stack Developer</h1>
+              <h2 class="title-2">Introduction</h2>
+              <div class="lead fw-bold">"사람에게 닿는 기술을 만들고 싶은 개발자"</div>
+              <h3 class="intro-body">
+                <span>안녕하세요. 백엔드 개발자를 지향하는 최지윤입니다.</span><br />
+                <span>저는 한 줄의 코드라도 누군가에게 도움이 된다면, 그 자체로 의미 있는 일이라고 믿습니다.</span><br />
+                <span>기술과 사람 사이의 균형을 고민하며, 따뜻함이 느껴지는 서비스를 만들고 싶습니다.</span><br />
+                <span>작은 불편을 해결하는 것에서 시작해, 누군가의 하루를 더 편안하게 만드는 개발자가 되겠습니다.</span>
               </h3>
             </header>
-          </section>
+          </div>
+        </section>
 
-          <!--ABOUT-->
-          <section id="about" class="about section scroll-spy">
-            <div class="inner">
-              <h2 class="title">ABOUT</h2>
-              <div class="about__wrapper">
-                <div class="about__profile">
-                  <!-- 본인 프로필 이미지 넣기 -->
-                  <img src="./images/profile.jpg" alt="프로필" />
-                  <div class="profile">
-                    <strong class="slogan">최지윤 (2002.07.23)</strong>
-                    <ul>
-                      <li>email : -@gmail.com</li>
-                      <li>
-                        <a href="https://github.com/">
-                          GitHub
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+        <!-- ABOUT -->
+        <section id="about" class="about section scroll-spy">
+          <div class="container">
+            <h2 class="title">ABOUT</h2>
+
+            <div class="about__wrapper row gy-4 align-items-center">
+              <div class="about__profile col-12 col-lg-6 text-center">
+                <img src="./images/profile.jpg" alt="프로필" class="profile-img" />
+                <div class="profile mt-3">
+                  <strong class="slogan d-block">최지윤 (2002.07.23)</strong>
+                  <ul class="list-unstyled mt-2">
+                    <li>email : -@gmail.com</li>
+                    <li class="mt-1">
+                      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+                    </li>
+                  </ul>
                 </div>
-                <div class="about__text">
-                  <div>
-                    <h4>EDUCATION</h4>
-                    <ul>
-                      <li>10.03 ~ 12.02 OO학교 OO과 졸업</li>
-                      <li>
-                        25.04 ~ 25.10 클라우드(AWS)활용 자바/스프링 개발
-                        부트캠프 수료
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4>CAREER</h4>
-                    <ul>
-                      <li>-</li>
-                      <li>-</li>
-                    </ul>
-                  </div>
+              </div>
+
+              <div class="about__text col-12 col-lg-6">
+                <div class="mb-4">
+                  <h4>EDUCATION</h4>
+                  <ul>
+                    <li>10.03 ~ 12.02 OO학교 OO과 졸업</li>
+                    <li>25.04 ~ 25.10 클라우드(AWS)활용 자바/스프링 개발 부트캠프 수료</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>CAREER</h4>
+                  <ul>
+                    <li>-</li>
+                    <li>-</li>
+                  </ul>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <!--SKILL-->
-          <section id="skill" class="skill section">
+        <!-- SKILL (네 구조 유지) -->
+        <section id="skill" class="skill section">
+          <div class="container">
             <h2 class="title">SKILL</h2>
-            <div class="inner">
-              <div class="skill-table">
-                <!-- 프로그래밍 언어 -->
-                <div class="skill-row">
-                  <div class="skill-category">
-                    <span class="material-symbols-outlined">description</span>
-                    프로그래밍 언어
-                  </div>
-                  <div class="skill-badges">
-                    <span class="badge badge--blue">Java</span>
-                    <span class="badge badge--mauve">JavaScript</span>
-                  </div>
+            <div class="skill-table mx-auto">
+              <!-- 네가 만든 기존 내용 유지 -->
+              <!-- 프로그래밍 언어 -->
+              <div class="skill-row">
+                <div class="skill-category">
+                  <span class="material-symbols-outlined">description</span>
+                  프로그래밍 언어
                 </div>
-
-                <!-- 백엔드 -->
-                <div class="skill-row">
-                  <div class="skill-category">
-                    <span class="material-symbols-outlined">description</span>
-                    백엔드
-                  </div>
-                  <div class="skill-badges">
-                    <span class="badge badge--mauve">Servlet/JSP</span>
-                    <span class="badge badge--gray">EL/JSTL</span>
-                    <span class="badge badge--green">Spring Framework</span>
-                    <span class="badge badge--blue-light">Spring Boot</span>
-                    <span class="badge badge--brown">Maven</span>
-                    <span class="badge badge--brown2">Gradle</span>
-                    <span class="badge badge--orange">Tomcat</span>
-                    <span class="badge badge--green2">Node.js</span>
-                  </div>
+                <div class="skill-badges">
+                  <span class="badge badge--blue">Java</span>
+                  <span class="badge badge--mauve">JavaScript</span>
                 </div>
-
-                <!-- 프론트엔드 -->
-                <div class="skill-row">
-                  <div class="skill-category">
-                    <span class="material-symbols-outlined">description</span>
-                    프론트엔드
-                  </div>
-                  <div class="skill-badges">
-                    <span class="badge badge--mauve">HTML5</span>
-                    <span class="badge badge--sand">CSS3</span>
-                    <span class="badge badge--gray">jQuery</span>
-                    <span class="badge badge--mauve">Bootstrap</span>
-                    <span class="badge badge--blue">React</span>
-                  </div>
+              </div>
+              <!-- 백엔드 -->
+              <div class="skill-row">
+                <div class="skill-category">
+                  <span class="material-symbols-outlined">description</span>
+                  백엔드
                 </div>
-
-                <!-- 데이터베이스 -->
-                <div class="skill-row">
-                  <div class="skill-category">
-                    <span class="material-symbols-outlined">description</span>
-                    데이터베이스
-                  </div>
-                  <div class="skill-badges">
-                    <span class="badge badge--brown3">MariaDB</span>
-                    <span class="badge badge--green3">MyBatis</span>
-                    <span class="badge badge--gray">JPA</span>
-                    <span class="badge badge--blue">MongoDB Atlas</span>
-                  </div>
+                <div class="skill-badges">
+                  <span class="badge badge--mauve">Servlet/JSP</span>
+                  <span class="badge badge--gray">EL/JSTL</span>
+                  <span class="badge badge--green">Spring Framework</span>
+                  <span class="badge badge--blue-light">Spring Boot</span>
+                  <span class="badge badge--brown">Maven</span>
+                  <span class="badge badge--brown2">Gradle</span>
+                  <span class="badge badge--orange">Tomcat</span>
+                  <span class="badge badge--green2">Node.js</span>
                 </div>
-
-                <!-- 데브옵스 -->
-                <div class="skill-row">
-                  <div class="skill-category">
-                    <span class="material-symbols-outlined">description</span>
-                    데브옵스
-                  </div>
-                  <div class="skill-badges">
-                    <span class="badge badge--yellow-dark">GitHub</span>
-                    <span class="badge badge--blue">Docker</span>
-                    <span class="badge badge--mauve-dark">Jenkins</span>
-                    <span class="badge badge--green">AWS</span>
-                  </div>
+              </div>
+              <!-- 프론트엔드 -->
+              <div class="skill-row">
+                <div class="skill-category">
+                  <span class="material-symbols-outlined">description</span>
+                  프론트엔드
+                </div>
+                <div class="skill-badges">
+                  <span class="badge badge--mauve">HTML5</span>
+                  <span class="badge badge--sand">CSS3</span>
+                  <span class="badge badge--gray">jQuery</span>
+                  <span class="badge badge--mauve">Bootstrap</span>
+                  <span class="badge badge--blue">React</span>
+                </div>
+              </div>
+              <!-- 데이터베이스 -->
+              <div class="skill-row">
+                <div class="skill-category">
+                  <span class="material-symbols-outlined">description</span>
+                  데이터베이스
+                </div>
+                <div class="skill-badges">
+                  <span class="badge badge--brown3">MariaDB</span>
+                  <span class="badge badge--green3">MyBatis</span>
+                  <span class="badge badge--gray">JPA</span>
+                  <span class="badge badge--blue">MongoDB Atlas</span>
+                </div>
+              </div>
+              <!-- 데브옵스 -->
+              <div class="skill-row">
+                <div class="skill-category">
+                  <span class="material-symbols-outlined">description</span>
+                  데브옵스
+                </div>
+                <div class="skill-badges">
+                  <span class="badge badge--yellow-dark">GitHub</span>
+                  <span class="badge badge--blue">Docker</span>
+                  <span class="badge badge--mauve-dark">Jenkins</span>
+                  <span class="badge badge--green">AWS</span>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <section id="project" class="project section">
+        <!-- PROJECT -->
+        <section id="project" class="project section">
+          <div class="container">
             <h2 class="title">PROJECT</h2>
-            <div class="inner">
-              <div class="project__card">
-                <div class="card prev"></div>
-                <div class="card center"></div>
-                <div class="card next"></div>
-              </div>
 
-              <div class="project-btn">
-                <div class="button-prev">
-                  <span class="material-symbols-outlined">
-                    arrow_back_ios
-                  </span>
-                </div>
-                <div class="button-next">
-                  <span class="material-symbols-outlined">
-                    arrow_forward_ios
-                  </span>
-                </div>
-              </div>
+            <div class="project__card">
+              <div class="card prev"></div>
+              <div class="card center"></div>
+              <div class="card next"></div>
+            </div>
 
-              <div class="project-text">
-                <ul>
-                  <li><span id="p-name">-</span></li>
-                  <li><span id="p-date">-</span></li>
-                  <li><span id="p-desc">-</span></li>
-                  <li>
-                    <strong>배포</strong>
-                    <a id="p-site" href="#" target="_blank" rel="noopener">-</a>
-                  </li>
-                </ul>
+            <div class="project-btn">
+              <div class="button-prev">
+                <span class="material-symbols-outlined">arrow_back_ios</span>
+              </div>
+              <div class="button-next">
+                <span class="material-symbols-outlined">arrow_forward_ios</span>
               </div>
             </div>
-          </section>
-        </div>
+
+            <div class="project-text">
+              <ul>
+                <li><span id="p-name">-</span></li>
+                <li><span id="p-date">-</span></li>
+                <li><span id="p-desc">-</span></li>
+                <li>
+                  <strong>배포</strong>
+                  <a id="p-site" href="#" target="_blank" rel="noopener">-</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </section>
 
-      <!--ASIDE-->
-      <section class="side-wrap">
+      <!-- ASIDE (데스크탑에서만 보이도록) -->
+      <section class="side-wrap d-none d-lg-block">
         <aside class="aside">
           <div class="inner">
             <ul>
@@ -243,16 +221,14 @@
       </section>
     </div>
 
-    <!--FOOTER-->
+    <!-- FOOTER -->
     <footer>
-      <div class="inner">
+      <div class="container">
         <p class="copyright">
           &copy; <span class="this-year"></span>
           Choi Ji Yun. All Rights Reserved.
         </p>
       </div>
     </footer>
-
-    <!--MODAL-->
   </body>
 </html>
