@@ -279,7 +279,7 @@ footer .copyright {
 /* 반응형  */
 @media (max-width: 991.98px) {
   .side-wrap {
-    width: 200px;
+    width: 150px;
   }
   .section {
     padding: 80px 0 48px;
