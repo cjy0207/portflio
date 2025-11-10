@@ -1,4 +1,3 @@
-console.log("app.js loaded");
 const controller = new ScrollMagic.Controller();
 
 const spyEls = document.querySelectorAll("section.scroll-spy");
@@ -12,8 +11,6 @@ spyEls.forEach(function (spyEl) {
     .addTo(controller);
 });
 
-//현재 연도 표시
-//날짜 정보를 가진 js의 date객체를 활용
 const currentDate = new Date().getFullYear();
 document.querySelector(".this-year").innerHTML = currentDate;
 
@@ -178,13 +175,12 @@ window.addEventListener('scroll', function(){
   }
 })
 
-const sideMenu = document.querySelector('.aside')
+//메뉴버튼
+const sideMenu = document.querySelector('.side-wrap')
+const main = document.querySelector('.wrap')
 
-MenuEl.addEventListener("click", (e) => {
+MenuEl.addEventListener('click', (e) => {
   e.preventDefault();
-  if (sideMenu.style.display === "none" || sideMenu.style.display === "") {
-    sideMenu.style.display = "block";
-  } else {
-    sideMenu.style.display = "none";
-  }
+  const opened = sideMenu.classList.toggle('is-open');
+  const main_size = main.style
 });

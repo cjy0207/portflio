@@ -19,8 +19,6 @@
     />
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
@@ -30,25 +28,19 @@
       rel="stylesheet"
     />
 
-    <!-- Swiper (필요하면 유지) -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
     <!-- ScrollMagic -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 
     <!-- App CSS / JS -->
     <link rel="stylesheet" href="css/main.css" />
     <script defer src="./js/app.js"></script>
+
+    
   </head>
 
   <body>
     <div class="wrap">
       <section class="main flex-grow-1">
-        <!-- INTRODUCTION -->
         <section id="introduction" class="introduction section">
           <div class="container">
             <header id="header" class="header">
@@ -130,81 +122,136 @@
           </div>
         </section>
 
-        <!-- SKILL (네 구조 유지) -->
+        <!-- SKILL -->
         <section id="skill" class="skill section">
           <div class="container">
             <h2 class="title">SKILL</h2>
-            <div class="skill-table mx-auto">
-              <!-- 네가 만든 기존 내용 유지 -->
-              <!-- 프로그래밍 언어 -->
-              <div class="skill-row">
-                <div class="skill-category">
-                  <span class="material-symbols-outlined">description</span>
-                  프로그래밍 언어
-                </div>
-                <div class="skill-badges">
-                  <span class="badge badge--blue">Java</span>
-                  <span class="badge badge--mauve">JavaScript</span>
-                </div>
-              </div>
-              <!-- 백엔드 -->
-              <div class="skill-row">
-                <div class="skill-category">
-                  <span class="material-symbols-outlined">description</span>
-                  백엔드
-                </div>
-                <div class="skill-badges">
-                  <span class="badge badge--mauve">Servlet/JSP</span>
-                  <span class="badge badge--gray">EL/JSTL</span>
-                  <span class="badge badge--green">Spring Framework</span>
-                  <span class="badge badge--blue-light">Spring Boot</span>
-                  <span class="badge badge--brown">Maven</span>
-                  <span class="badge badge--brown2">Gradle</span>
-                  <span class="badge badge--orange">Tomcat</span>
-                  <span class="badge badge--green2">Node.js</span>
-                </div>
-              </div>
-              <!-- 프론트엔드 -->
-              <div class="skill-row">
-                <div class="skill-category">
-                  <span class="material-symbols-outlined">description</span>
-                  프론트엔드
-                </div>
-                <div class="skill-badges">
-                  <span class="badge badge--mauve">HTML5</span>
-                  <span class="badge badge--sand">CSS3</span>
-                  <span class="badge badge--gray">jQuery</span>
-                  <span class="badge badge--mauve">Bootstrap</span>
-                  <span class="badge badge--blue">React</span>
-                </div>
-              </div>
-              <!-- 데이터베이스 -->
-              <div class="skill-row">
-                <div class="skill-category">
-                  <span class="material-symbols-outlined">description</span>
-                  데이터베이스
-                </div>
-                <div class="skill-badges">
-                  <span class="badge badge--brown3">MariaDB</span>
-                  <span class="badge badge--green3">MyBatis</span>
-                  <span class="badge badge--gray">JPA</span>
-                  <span class="badge badge--blue">MongoDB Atlas</span>
-                </div>
-              </div>
-              <!-- 데브옵스 -->
-              <div class="skill-row">
-                <div class="skill-category">
-                  <span class="material-symbols-outlined">description</span>
-                  데브옵스
-                </div>
-                <div class="skill-badges">
-                  <span class="badge badge--yellow-dark">GitHub</span>
-                  <span class="badge badge--blue">Docker</span>
-                  <span class="badge badge--mauve-dark">Jenkins</span>
-                  <span class="badge badge--green">AWS</span>
-                </div>
-              </div>
-            </div>
+
+            <table
+              class="table table-bordered table-hover align-middle text-center"
+            >
+              <thead class="table-dark">
+                <tr>
+                  <th style="width: 25%">구분</th>
+                  <th>기술 스택</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="material-symbols-outlined">description</span>
+                    프로그래밍 언어
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-outline-primary">
+                      Java
+                    </button>
+                    <button type="button" class="btn btn-outline-warning">
+                      JavaScript
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <span class="material-symbols-outlined">description</span>
+                    백엔드
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-outline-warning">
+                      Servlet/JSP
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary">
+                      EL/JSTL
+                    </button>
+                    <button type="button" class="btn btn-outline-success">
+                      Spring Framework
+                    </button>
+                    <button type="button" class="btn btn-outline-info">
+                      Spring Boot
+                    </button>
+                    <button type="button" class="btn btn-outline-dark">
+                      Maven
+                    </button>
+                    <button type="button" class="btn btn-outline-dark">
+                      Gradle
+                    </button>
+                    <button type="button" class="btn btn-outline-danger">
+                      Tomcat
+                    </button>
+                    <button type="button" class="btn btn-outline-success">
+                      Node.js
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <span class="material-symbols-outlined">description</span>
+                    프론트엔드
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-outline-warning">
+                      HTML5
+                    </button>
+                    <button type="button" class="btn btn-outline-warning">
+                      CSS3
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary">
+                      jQuery
+                    </button>
+                    <button type="button" class="btn btn-outline-info">
+                      Bootstrap
+                    </button>
+                    <button type="button" class="btn btn-outline-primary">
+                      React
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <span class="material-symbols-outlined">description</span>
+                    데이터베이스
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-outline-dark">
+                      MariaDB
+                    </button>
+                    <button type="button" class="btn btn-outline-success">
+                      MyBatis
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary">
+                      JPA
+                    </button>
+                    <button type="button" class="btn btn-outline-primary">
+                      MongoDB Atlas
+                    </button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <span class="material-symbols-outlined">description</span>
+                    데브옵스
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-outline-dark">
+                      GitHub
+                    </button>
+                    <button type="button" class="btn btn-outline-primary">
+                      Docker
+                    </button>
+                    <button type="button" class="btn btn-outline-warning">
+                      Jenkins
+                    </button>
+                    <button type="button" class="btn btn-outline-success">
+                      AWS
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </section>
 
@@ -243,8 +290,8 @@
         </section>
       </section>
 
-      <!-- ASIDE (데스크탑에서만 보이도록) -->
-      <section class="side-wrap d-none d-lg-block">
+      <!-- ASIDE -->
+      <section class="side-wrap">
         <aside class="aside">
           <div class="inner">
             <ul>
